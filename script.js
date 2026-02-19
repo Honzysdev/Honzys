@@ -1,3 +1,12 @@
+/* #This code is written by Honzys
+
+Copyright (c) 2026 Honzys. All rights reserved.
+
+This source code is the property of Honzys and is protected by copyright law.
+Unauthorized copying, modification, distribution, or use of this code,
+via any medium, is strictly prohibited without prior written permission
+from Honzys.
+*/
 let lastsentence = "";
 
 document.getElementById('ragebaitButton').addEventListener('click', function() {
@@ -20,5 +29,6 @@ const sentences = [
     'Nightblade says I leave him on cliff hangers but actually he is the one to say "nvm" everytime hahah!',
     "Lmao Nightblade u are so ez to ragebait!", 
     "Do you want to know how to ragebait, Nightblade? Well wait a few weeks and find out!😂",
+
 
 ]
