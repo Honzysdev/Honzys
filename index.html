@@ -1,0 +1,223 @@
+<!-- #This code is written by Honzys
+
+Copyright (c) 2026 Honzys. All rights reserved.
+
+This source code is the property of Honzys and is protected by copyright law.
+Unauthorized copying, modification, distribution, or use of this code,
+via any medium, is strictly prohibited without prior written permission
+from Honzys.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Agma Files</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loggedIn" class="loggedInstyle" style="display:none;"><img id="userPfp" src="" alt="User Avatar"><span id="userName"></span><img id="Icon" src="" alt="" style="display:none;"></div>
+    <div id="mainmenucontainer" class="container" style="display: none;"><!-- dát na flex pouze pri upravovani, jinak none, nakonec toto bude az druha stranka-->
+        <h1 class="title" style="position: absolute; top: 10%;">The Agma Files</h1>
+        <img id="image1" class="agmaPics" src="pics\image1.png" alt="agmalagspike">
+        <img id="image2" class="agmaPics" src="pics\image2.png" alt="agmalagspike">
+        <img id="image3" class="agmaPics" src="pics\image3.png" alt="agmalagspike">
+        <img id="image4" class="agmaPics" src="pics\image4.png" alt="agmalagspike">
+        <video id="vid1" src="pics\agmawatch.mp4" controls autoplay loop muted></video>
+        <audio id="agmaAnthem" src="pics\agma.io nationall song.mp3" controls autoplay loop></audio>
+        <button id="showFilesBtn"><p class="text" style="color: turquoise; text-decoration: underline;">Click to view somebody's file ❤️</p></button>  
+        
+        <br>    
+        <p id="meText" class="text">By Honzys ♥</p>
+    </div>
+    </div>
+    <div id="listContainer" class="container" style="display:none;"><!-- nechat display: none; -->
+        <button class="gobackBtn">GO BACK</button>
+        <h1 id="originalTitle" class="title title1">Choose which player's file to view.</h1> 
+        <div class="btnRows playerPage" style="margin-top: 100px;">
+            <button id="NighbladeBtn" class="playerBtns" onclick="getPlayer('Nightblade')" data-player-div="NightbladePage" >Nightblade </button><img src="pics\nightbladespfp.png" class="pfp"><img class="pfp listPfp" title="Ideas support" src="pics\supportlogo.png" alt="">
+            <div class="btnRows playerPage" style="margin-left: 20vh;">
+                <button id="LightBtn" class="playerBtns" onclick="getPlayer('Light')" data-player-div="LightPage">Light </button><img src="pics\lightspfp.gif" class="pfp">
+            </div>
+        </div>
+        <div class="btnRows playerPage">
+            <button id="KenzaBtn" class="playerBtns" onclick="getPlayer('Kenza')" data-player-div="KenzaPage">Kenza </button><img src="pics\kenzaspfp.png" class="pfp">
+            <div class="btnRows playerPage" style="margin-left: 33vh;">
+                <button id="tumtumBtn" class="playerBtns" onclick="getPlayer('Tumtum')" data-player-div="TumtumPage"><a href="https://translate.google.com/" target="_blank">Tumtum </button></a><img src="pics\tumtumspfp.png"  class="pfp">
+            </div>
+        </div>
+        <div class="btnRows playerPage"><button id="AnthonyBtn" class="playerBtns" onclick="getPlayer('Anthony')" data-player-div="AnthonyPage">Anthony </button><img src="pics\anthonyspfp.png"  class="pfp">
+            <div class="btnRows playerPage" style="margin-left: 30vh;"><button id="HonzysBtn" class="playerBtns"onclick="getPlayer('Honzys')" data-player-div="HonzysPage">Honzys </button><img src="pics\honzyspfp.png" class="pfp"><img title="Developer" src="pics\developerlogo.png" style="background-size: 3em;" alt="" class="pfp listPfp"></div>
+            
+        </div>
+        <div class="btnRows playerPage"><button id="MedaBtn" class="playerBtns" onclick="getPlayer('Meda')" data-player-div="MedaPage">Meda </button><img src="pics\medaspfp.png" class="pfp"></div>
+        <div class="btnRows playerPage"><button id="Kingmemo47Btn" class="playerBtns" onclick="getPlayer('Kingmemo47')" data-player-div="Kingmemo47Page">Kingmemo47 </button><img src="pics\memospfp.png" class="pfp"></div>
+        
+        
+        
+
+
+
+
+    </div>
+    <div id="NightbladePage" class="container" style="display:none;"> <!-- nechat display: none; -->
+        <h1 class="title1 title"></h1><button class="gobackBtn">GO BACK</button>
+        <h2>Biggest Menace to human society</h2>
+        <div style="display:flex; flex-direction: column; width: fit-content; height: auto; position:absolute; bottom: 1%; right: 1%">
+            <div class="filesContainerAll">
+                <button id="realCross" class="crossBtns "><img src="pics\real cross.png" alt="fake cross" class="crossBtns"></button>
+                <button id="fakeCross" class="crossBtns "><img src="pics/fake cross.png" alt="real cross" class="crossBtns"></button>
+                <output id="outputNightblade"></output>
+            </div>
+            <button class="text filesButton filesBtnSelector"></button>
+        </div>
+    </div>
+
+    <div id="KenzaPage" class="container" style="display:none;"> <!-- nechat display: none; -->
+        <h1 class="title1 title"></h1><button class="gobackBtn">GO BACK</button>
+        <div style="display:flex; flex-direction: column; width: fit-content; height: auto; position:absolute; bottom: 1%; right: 1%">
+            <div class="filesContainerAll">
+                <button class="crossBtns fakeCrossBtn"><img src="pics/fake cross.png" alt="fake cross" class="crossBtns"></button>
+                <button class="crossBtns realCrossBtn"><img src="pics\real cross.png" alt="real cross" class="crossBtns"></button>
+                <output id="outputKenza"></output>
+            </div>
+            <button  class="text filesButton filesBtnSelector"></button>
+        </div>
+    </div>
+    
+    <div id="AnthonyPage" class="container" style="display:none;"> <!-- nechat display: none; -->
+        <h1 class="title1 title"></h1><button class="gobackBtn">GO BACK</button>
+        <div style="display:flex; flex-direction: column; width: fit-content; height: auto; position:absolute; bottom: 1%; right: 1%">
+            <div class="filesContainerAll">
+                <button class="crossBtns realCrossBtn"><img src="pics\real cross.png" alt="fake cross" class="crossBtns"></button>
+                <button class="crossBtns fakeCrossBtn"><img src="pics/fake cross.png" alt="real cross" class="crossBtns"></button>
+                <output id="outputAnthony"></output>
+            </div>
+            <button  class="text filesButton filesBtnSelector"></button>
+        </div>
+    </div>
+
+    <div id="MedaPage" class="container" style="display:none;"> <!-- nechat display: none; -->
+        <h1 class="title1 title"></h1><button class="gobackBtn">GO BACK</button>
+        <div style="display:flex; flex-direction: column; width: fit-content; height: auto; position:absolute; bottom: 1%; right: 1%">
+            <div class="filesContainerAll">
+                <button class="crossBtns realCrossBtn"><img src="pics\real cross.png" alt="fake cross" class="crossBtns"></button>
+                <button class="crossBtns fakeCrossBtn"><img src="pics/fake cross.png" alt="real cross" class="crossBtns"></button>
+                <output id="outputMeda"></output>
+            </div>
+            <button  class="text filesButton filesBtnSelector"></button>
+        </div>
+    </div>
+
+    <div id="Kingmemo47Page" class="container" style="display:none;"> <!-- nechat display: none; -->
+        <h1 class="title1 title"></h1><button class="gobackBtn">GO BACK</button>
+        <div style="display:flex; flex-direction: column; width: fit-content; height: auto; position:absolute; bottom: 1%; right: 1%">
+            <div class="filesContainerAll">
+                <button class="crossBtns realCrossBtn"><img src="pics\real cross.png" alt="fake cross" class="crossBtns"></button>
+                <button class="crossBtns fakeCrossBtn"><img src="pics/fake cross.png" alt="real cross" class="crossBtns"></button>
+                <output id="outputKingmemo47"></output>
+            </div>
+            <button  class="text filesButton filesBtnSelector"></button>
+        </div>
+    </div>
+
+    <div id="HonzysPage" class="container" style="display:none;"> <!-- nechat display: none; -->
+        <h1 class="title1 title"></h1><button class="gobackBtn">GO BACK</button>
+        <div style="display:flex; flex-direction: column; width: fit-content; height: auto; position:absolute; bottom: 1%; right: 1%">
+            <div class="filesContainerAll">
+                <button class="crossBtns realCrossBtn"><img src="pics\real cross.png" alt="fake cross" class="crossBtns"></button>
+                <button class="crossBtns fakeCrossBtn"><img src="pics/fake cross.png" alt="real cross" class="crossBtns"></button>
+                <output id="outputHonzys"></output>
+            </div>
+            <button  class="text filesButton filesBtnSelector"></button>
+        </div>
+    </div>
+
+    <div id="LightPage" class="container" style="display:none;"> <!-- nechat display: none; -->
+        <h1 class="title1 title"></h1><button class="gobackBtn">GO BACK</button>
+        <div style="display:flex; flex-direction: column; width: fit-content; height: auto; position:absolute; bottom: 1%; right: 1%">
+            <div class="filesContainerAll">
+                <button class="crossBtns realCrossBtn"><img src="pics\real cross.png" alt="fake cross" class="crossBtns"></button>
+                <button class="crossBtns fakeCrossBtn"><img src="pics/fake cross.png" alt="real cross" class="crossBtns"></button>
+                <output id="outputLight"></output>
+            </div>
+            <button  class="text filesButton filesBtnSelector"></button>
+        </div>
+    </div>
+
+    <div id="TumtumPage" class="container" style="display:none;"> <!-- nechat display: none; -->
+        <h1 class="title1 title"></h1><button class="gobackBtn">GO BACK</button>
+        <div style="display:flex; flex-direction: column; width: fit-content; height: auto; position:absolute; bottom: 1%; right: 1%">
+            <div class="filesContainerAll">
+                <button class="crossBtns realCrossBtn"><img src="pics\real cross.png" alt="fake cross" class="crossBtns"></button>
+                <button class="crossBtns fakeCrossBtn"><img src="pics/fake cross.png" alt="real cross" class="crossBtns"></button>
+                <output id="outputTumtum"></output>
+            </div>
+            <button class="text filesButton filesBtnSelector"></button>
+        </div>
+    </div>
+
+    <!--login form - dodelat pak detaily-->
+    <div id="loginPageHide" class="formWrapper container" style="display:flex;"> <!-- nechat na flex, ale pokud budu upravovat klidne vypnout-->
+        <div class="panelWrapper">
+        <img class="AgmaFilesImg" src="pics\agmafiles.png" alt="">
+        <div id="loginPanel" class="panel active">
+            <div>
+                <p style="margin: 0; padding: 0; display: flex;"><button class="LogInandRegisterBtns active" data-target="loginPanel">Login</button><button class="LogInandRegisterBtns" data-target="registerPanel">Register</button></p>
+            </div>
+                <form action="">
+                        <input  id="usernameLogin" class="logInFormstyle" type="name" placeholder="Username" maxlength="20"><br>
+                        <input  id="passwordLogin" class="logInFormstyle" type="password" placeholder="Password" maxlength="25"><br>
+                        <button id="loginBtn" class="menuBtn">Login</button>
+                        <p class="loginHelp noAccnt">Don't have an account? <a  class="helpLogin" href="" style="color: rgba(255, 102, 0, 1); margin-left:5px;">REGISTER NOW</a></p>
+                        <p id="switchRegister" class="loginHelp">Forgot your password?   <a class="helpLogin" href="" style="color:rgba(255, 102, 0, 1); margin-left:5px;"> Click to Reset</a></p>
+                    </form>
+                    
+        </div>
+                <div id="registerPanel" class="panel" >
+                        <p style="margin: 0; padding: 0; display: flex;"><button class="LogInandRegisterBtns" data-target="loginPanel">Login</button><button class="LogInandRegisterBtns" data-target="registerPanel">Register</button></p>
+                        <form action="">
+                            <input  id="usernameRegister" class="logInFormstyle" type="name" placeholder="Username" maxlength="20"><br>
+                            <input  id="emailRegister" class="logInFormstyle" type="name" placeholder="Email" maxlength="30"><br>
+                            <input  id="passwordRegister" class="logInFormstyle" type="password" placeholder="Password" maxlength="25"><br>
+                            <button id="registerBtn"  class="menuBtn">Register</button>
+                            <p class="loginHelp noAccnt">Don't have an account? <a  class="helpLogin" href="" style="color: rgba(255, 102, 0, 1); margin-left:5px">REGISTER NOW</a></p>
+                            <p id="switchLogin" class="loginHelp">Already have an account?<a class="helpLogin" href onclick="loginPanel" style="color:rgba(255, 102, 0, 1); margin-left:5px"> LOGIN NOW </a></p>
+                        </form>
+                    </div>
+                </div>
+            
+            
+    
+
+    <div id="updateLog">
+    <h3>Update Log</h3>
+        <ul><br>
+            <li>26 Feb 2026: Adjusted animations, added logged in as in top left corner after logging in ♥</li><br>
+            <li>26 Feb 2026: Added special ranks, support panel and more</li><br>
+            <li>26 Feb 2026: Added animated switch between login/register forms</li><br>
+            <li>24 Feb 2026: New login/register UI</li><br>
+            <li>24 Feb 2026: Added blurred, colored and reactive backgrounds</li><br>
+            <li>24 Feb 2026: Added glow for some buttons, more will be added in future updates</li><br>
+            <li>23 Feb 2026: Animated background improved</li><br>
+            <button type="button" style="display:flex;align-items:center;justify-content:center;gap:6px;width:100%;padding:10px 14px;border:none;border-radius:8px;margin-top:10px;background:linear-gradient(135deg,#5f2eea,#00c2ff);box-shadow:0 0 12px rgba(120,90,255,0.5);color:#ffffff;font-family:'Poppins',sans-serif;font-weight:600;font-size:13px;letter-spacing:-0.3px;transition:transform 0.12s ease,box-shadow 0.2s ease,filter 0.2s ease;" onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 0 18px rgba(120,90,255,0.8)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 0 12px rgba(120,90,255,0.5)'"><span style="color:#e0d7ff;text-shadow:0 0 8px rgba(200,170,255,0.9);">🚀💫</span><span style="font-family:'Aldrich';">23 Feb 2026: New things are being added</span><span style="font-family:'Aldrich';opacity:0.9;">Sorry 💜</span></button>
+        </ul>
+    </div>
+
+    <div id="importantPanel">
+        <h3>Important Notes!</h3>
+        <ul>
+            <br><li>In the future everything will be revealed to everyone so stay tuned!</li><br>
+            <li>For now you will need to get access by Honzys (@honzys.1)</li><br>
+            <li>Register doesn't work, only Honzys can grant you access via strict access</li><br>
+            <li class="specialThanks" style="font-weight: bold;">Special thanks to Nightblade for ideas!</li><br>
+        </ul>
+    </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
