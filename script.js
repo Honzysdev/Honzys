@@ -1,5 +1,6 @@
 window.onload = function () {
-    alert("Sign in with your unique id given by developer to access Beta Testing")
+    alert("Sign in with your unique id given by developer to access Beta Testing");
+}
 
 const Id = window.prompt("Id:");
 const password = window.prompt("Password:");
