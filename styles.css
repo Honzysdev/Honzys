@@ -69,12 +69,12 @@ from developer.
 #updateLog {
     position: absolute;
     top: 10%;
-    right: 5%;
-    width: 300px;
+    right: 0.5%;
+    width: 250px;
     max-width: 25%;
     background-color: rgba(50, 50, 60, 0.8);
     backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(1px);
     border-radius: 12px;
     padding: 15px 20px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.4);
@@ -114,11 +114,11 @@ from developer.
 #importantPanel {
     position: absolute;
     top: 10%;
-    left: 5%;
-    width: 280px;
+    left: 0.5%;
+    width: 250px;
     max-width: 25%;
     background-color: rgba(40, 50, 70, 0.8);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(8px);
     border-radius: 12px;
     padding: 15px 20px;
