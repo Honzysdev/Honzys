@@ -1,24 +1,21 @@
 window.addEventListener("load", function () {
     alert("Sign in with your unique ID given by developer to access Beta Testing");
-
     let loggedIn = false;
 
     do {
         const Id = window.prompt("Id:");
         const password = window.prompt("Password:");
-
         const attempt = `id: ${Id} pass: ${password}`;
-
+        
         if (Id && password && a.includes(attempt)) {
             loggedIn = true;
             console.log("Login successful:", Id);
             alert("Login successful!");
         } else {
-            alert("Incorrect login, please contact developer if you are entering correct logins");
+            alert("Incorrect login, please contact developer if you are having troubles logging in");
         }
-
     } while (!loggedIn);
-
+    
     console.log("Logged in:", loggedIn);
 });
 
