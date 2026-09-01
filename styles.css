@@ -6,7 +6,7 @@ Copyright (c) 2026 Honzys. All rights reserved.
 This source code is the property of Honzys and is protected by copyright law.
 Unauthorized copying, modification, distribution, or use of this code,
 via any medium, is strictly prohibited without prior written permission
-from Honzys.
+from developer.
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -175,102 +175,3 @@ from Honzys.
     }
 }
 
-.loggedInstyle {
-    position: absolute;
-    top: 1%;
-    left: 1%;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.1em;
-    width: fit-content;
-    height: auto;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    backdrop-filter: blur(20px);
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-
-}
-
-#userPfp {
-    border-radius: 50%;
-    width: 60px;
-    height: auto;
-    margin-right: 10px;
-}
-
-#Icon {
-    width: 80px;
-    height: auto;
-    margin-left: 10px;
-}
-
-.listPfp {
-    position: relative;
-    transition: transform 0.3s ease;
-    transform-origin: center;
-}
-
-.listPfp:hover {
-    transform: scale(5);
-    z-index: 10;
-}
-
-#image1 {
-    position: absolute;
-    top: 2%;
-    right: 2%;
-    width: 300px;
-    height: min-content;
-}
-
-#image2 {
-    position: absolute;
-    bottom: 2%;
-    left: 2%;
-    width: 700px;
-    height: auto;
-}
-
-#image3 {
-    position: absolute;
-    bottom: 10%;
-    right: 2%;
-    width: 600px;
-    height: auto;
-}
-
-#image4 {
-    position: absolute;
-    bottom: 25%;
-    left: 21.5%;
-    width: 400px;
-    height: auto;
-}
-
-#vid1 {
-    position: absolute;
-    top: 14%;
-    left: 2%;
-    height: auto;
-    width: 250px;
-}
-
-#agmaAnthem {
-    position: absolute;
-    left: 20%;
-    bottom: 40%;
-    width: 200px;
-}
-
-#agmafilesimg1 {
-    width: 300px;
-    height: auto;
-    margin: 0px;
-}
-
-.agmaPics:hover {
-    scale: 1.1;
-}
