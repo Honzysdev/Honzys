@@ -1,23 +1,4 @@
-window.addEventListener("load", function () {
-    alert("Sign in with your unique ID given by developer to access Beta Testing");
-    let loggedIn = false;
-
-    do {
-        const Id = window.prompt("Id:");
-        const password = window.prompt("Password:");
-        const attempt = `id: ${Id} pass: ${password}`;
-        
-        if (Id && password && a.includes(attempt)) {
-            loggedIn = true;
-            console.log("Login successful:", Id);
-            alert("Login successful!");
-        } else {
-            alert("Incorrect login, please contact developer if you are having troubles logging in");
-        }
-    } while (!loggedIn);
-    
-    console.log("Logged in:", loggedIn);
-});
+window.addEventListener("load", function () { alert("Sign in with your unique ID given by developer to access Beta Testing"); let loggedIn = false; do { const Id = window.prompt("Id:"); const password = window.prompt("Password:"); if (!Id || !password) { alert("Incorrect login, please contact developer if you are having troubles logging in"); continue; } console.log("Login attempt:", Id); const validLogin = a.some(user => { const match = user.match(/^id:\s*(\S+)\s+pass:\s*(\S+)$/); if (!match) return false; const storedId = match[1]; const storedPassword = match[2]; return Id === storedId && password === storedPassword; }); if (validLogin) { loggedIn = true; console.log("Login successful:", Id); alert("Login successful!"); } else { alert("Incorrect login, please contact developer if you are having troubles logging in"); } } while (!loggedIn); console.log("Logged in:", loggedIn); });
 
 
 const e = [
