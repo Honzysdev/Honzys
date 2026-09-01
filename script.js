@@ -6,10 +6,19 @@ const e = [
     "YVdRNklERTRORGN6TmpJNU5UQXhPRFEzTXpZeVZqUnVWRGh3V2paUllRPT0="
 ];
 
-const a = e.map(x => atob(atob(x)));
-
 window.addEventListener("load", async function () {
     await new Promise(resolve => setTimeout(resolve, 3000));
+
+    let a;
+
+    try {
+        a = e.map(x => atob(atob(x)));
+        console.log("Decoded accounts:", a);
+    } catch (error) {
+        console.error("Failed to decode login data:", error);
+        alert("Login system error. Please contact the developer.");
+        return;
+    }
     alert("Sign in with your unique ID given by developer to access Beta Testing");
 
     let loggedIn = false;
@@ -23,22 +32,17 @@ window.addEventListener("load", async function () {
             await new Promise(resolve => setTimeout(resolve, 3000));
             continue;
         }
-
         const attempt = `id: ${Id} pass: ${password}`;
-
         console.log("Attempt:", attempt);
-        console.log("Stored:", a);
-
         if (a.includes(attempt)) {
             loggedIn = true;
+
             console.log("Login successful:", Id);
             alert("Login successful!");
         } else {
             alert("Incorrect login, please contact developer if you are having troubles logging in.");
             await new Promise(resolve => setTimeout(resolve, 3000));
         }
-
     } while (!loggedIn);
-
     console.log("Logged in:", loggedIn);
 });
