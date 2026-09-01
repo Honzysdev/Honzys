@@ -1,20 +1,20 @@
-window.onload = function () {
-    alert("Sign in with your unique id given by developer to access Beta Testing");
-}
+window.addEventListener("load", function () {
+    alert("Sign in with your unique ID given by developer to access Beta Testing");
 
-const Id = window.prompt("Id:");
-const password = window.prompt("Password:");
-const loggedIn;
+    const Id = window.prompt("Id:");
+    const password = window.prompt("Password:");
 
-if (Id && password) {
-    console.log("Login attempt:", Id);
-    loggedIn = true;
-}
-else {
-    window.alert("Incorrect log in, please contact developer if you are entering correct logins");
-    loggedIn = false
-}
+    let loggedIn = false;
 
+    if (Id && password) {
+        console.log("Login attempt:", Id);
+        loggedIn = true;
+    } else {
+        alert("Incorrect login, please contact developer if you are entering correct logins");
+    }
+
+    console.log("Logged in:", loggedIn);
+});
 const u´ = [
     "YVdRNklEZzBOekk1TVRZek5URXdORGN5T0RNNU1UWUtjR0Z6Y3pvZ1N6ZHRVVEo0T1V4d1VnPT0=",
     "YVdRNklETTVNamd4TnpRMk5UQXlPVEU0TXpjME5qVUtjR0Z6Y3pvZ1ZqUnVWRGh3V2paUllRPT0=",
