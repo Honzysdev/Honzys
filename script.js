@@ -15,7 +15,7 @@ window.addEventListener("load", function () {
 
     console.log("Logged in:", loggedIn);
 });
-const u´ = [
+const u = [
     "YVdRNklEZzBOekk1TVRZek5URXdORGN5T0RNNU1UWUtjR0Z6Y3pvZ1N6ZHRVVEo0T1V4d1VnPT0=",
     "YVdRNklETTVNamd4TnpRMk5UQXlPVEU0TXpjME5qVUtjR0Z6Y3pvZ1ZqUnVWRGh3V2paUllRPT0=",
     "YVdRNklEWXhOVGt5T0RNM05EWXdNVGt5TnpRNE16QUtjR0Z6Y3pvZ1NEbDNVak5yVEcwM1dBPT0=",
@@ -23,5 +23,5 @@ const u´ = [
     "YVdRNklERTRORGN6TmpJNU5UQXhPRFEzTXpZeU9UUUtjR0Z6Y3pvZ1RUWjRTemx5VkdJeVZ3PT0="
 ];
 
-const u = u´.map(x => atob(atob(x)));
+const u = u.map(x => atob(atob(x)));
 console.log(u);
