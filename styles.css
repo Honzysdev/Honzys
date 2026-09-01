@@ -183,6 +183,7 @@ from developer.
     height: 100%;
     object-position: center;
     object-fit: cover;
+    transform: scale(1.2) translate(0, 50px);
 }
 
 
