@@ -6,46 +6,37 @@ const e = [
     "YVdRNklERTRORGN6TmpJNU5UQXhPRFEzTXpZeU9UUWdjR0Z6Y3pvZ1RUWjRTemx5VkdJeVZ3PT0="
 ];
 
-window.addEventListener("load", async () => {
-
-    // Wait 3 seconds after the page has completely loaded
+window.addEventListener("load", async function () {
     await new Promise(resolve => setTimeout(resolve, 3000));
 
     let accounts;
 
     try {
-        // Decode Base64 twice
-        accounts = e.map(encoded => {
-            return atob(atob(encoded));
-        });
-
+        accounts = e.map(encoded => atob(atob(encoded)));
         console.log("Decoded accounts:", accounts);
-
     } catch (error) {
         console.error("Failed to decode login data:", error);
-
         alert("Login system error. Please contact the developer.");
         return;
     }
-
     alert(
         "Sign in with your unique ID given by the developer to access Beta Testing."
     );
 
     let loggedIn = false;
-
     while (!loggedIn) {
 
         const id = window.prompt("ID:");
-        const password = window.prompt("Password:");
-
-        // Cancel button
-        if (id === null || password === null) {
-            alert("Login cancelled.");
+        if (id === null) {
             continue;
         }
 
-        // Remove accidental spaces
+        const password = window.prompt("Password:");
+        
+        if (password === null) {
+            continue;
+        }
+        
         const cleanId = id.trim();
         const cleanPassword = password.trim();
 
@@ -61,17 +52,11 @@ window.addEventListener("load", async () => {
         console.log("Login attempt:", attempt);
 
         if (accounts.includes(attempt)) {
-
             loggedIn = true;
-
             console.log("Login successful:", cleanId);
-
             alert("Login successful!");
-
         } else {
-
             console.log("Login failed:", cleanId);
-
             alert(
                 "Incorrect login, please contact the developer if you are having trouble logging in."
             );
