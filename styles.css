@@ -17,20 +17,7 @@ from developer.
     overflow: hidden;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    /*background: linear-gradient(50deg, rgb(6, 95, 49), rgb(39, 115, 134), rgb(114, 4, 174));*/
-    background: linear-gradient(50deg, #065f31, #277386, #7204ae);
-    background-size: 600% 600%;
 
-    -webkit-animation: gradientAnim 10s ease infinite;
-    -moz-animation: gradientAnim 10s ease infinite;
-    animation: gradientAnim 10s ease infinite;
-}
 
 @-webkit-keyframes gradientAnim {
     0%{background-position:0% 50%}
@@ -72,10 +59,7 @@ from developer.
     right: 0.5%;
     width: 250px;
     max-width: 25%;
-    background-color: rgba(50, 50, 60, 0.8);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(1px);
-    border-radius: 12px;
+    border:none;
     padding: 15px 20px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.4);
     z-index: 700;
@@ -117,10 +101,7 @@ from developer.
     left: 0.5%;
     width: 250px;
     max-width: 25%;
-    background-color: rgba(40, 50, 70, 0.8);
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(8px);
-    border-radius: 12px;
+    border: none;
     padding: 15px 20px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.4);
     z-index: 700;
