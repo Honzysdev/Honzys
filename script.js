@@ -3,13 +3,12 @@ const e = [
     "YVdRNklETTVNamd4TnpRMkU0TXpjME5qVUtjR0Z6Y3pvZ1ZqUnVWRGh3V2paUllRPT0=",
     "YVdRNklEWXhOVGt5T0RNM05EWXdNVGt5TnpRNE16QUtjR0Z6Y3pvZ1NEbDNVak5yVEcwM1dBPT0=",
     "YVdRNklEY3lPRE0yTkRreE1EVTNNamd6TmpReE9UVUtjR0Z6Y3pvZ1VUSnpXVGQyVG1NMFVBPT0=",
-    "YVdRNklERTRORGN6TmpJNU5UQXhPRFEzTXpZeU9UUUtjR0Z6Y3pvZ1RUWjRTemx5VkdJeVZ3PT0="
+    "YVdRNklERTRORGN6TmpJNU5UQXhPRFEzTXpZeVZqUnVWRGh3V2paUllRPT0="
 ];
 
 const a = e.map(x => atob(atob(x)));
 
 window.addEventListener("load", async function () {
-
     await new Promise(resolve => setTimeout(resolve, 3000));
     alert("Sign in with your unique ID given by developer to access Beta Testing");
 
@@ -43,4 +42,3 @@ window.addEventListener("load", async function () {
 
     console.log("Logged in:", loggedIn);
 });
-
