@@ -5,7 +5,7 @@ const e = [
     "NzI4MzY0OTEwNTcyODM2NDE5NQ=="
 ];
 
-window.addEventListener("load", async function () {
+async function startLogin() {
     await new Promise(resolve => setTimeout(resolve, 3000));
 
     let allowedIds;
@@ -13,18 +13,22 @@ window.addEventListener("load", async function () {
     try {
         allowedIds = e.map(encoded => atob(encoded));
         console.log("Allowed IDs:", allowedIds);
+
     } catch (error) {
         console.error("Failed to decode IDs:", error);
         alert("Login system error. Please contact the developer.");
         return;
     }
-    alert("Sign in with your unique ID given by the developer to access Beta Testing.");
+
+    alert(
+        "Sign in with your unique ID given by the developer to access Beta Testing."
+    );
 
     let loggedIn = false;
-
     while (!loggedIn) {
-        const id = window.prompt("ID:");
 
+        const id = window.prompt("ID:");
+        
         if (id === null) {
             continue;
         }
@@ -49,5 +53,10 @@ window.addEventListener("load", async function () {
     }
 
     console.log("Logged in:", loggedIn);
-});
-```
+}
+
+if (document.readyState === "loading") {
+    window.addEventListener("load", startLogin);
+} else {
+    startLogin();
+}
