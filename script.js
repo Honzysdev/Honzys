@@ -1,4 +1,4 @@
-window.alert("Sign in by your unique id given by developer!");
+window.alert.onload("Sign in by your unique id given by developer!");
 
 const Id = window.prompt("Id:");
 const password = window.prompt("Password:");
