@@ -23,5 +23,5 @@ const u = [
     "YVdRNklERTRORGN6TmpJNU5UQXhPRFEzTXpZeU9UUUtjR0Z6Y3pvZ1RUWjRTemx5VkdJeVZ3PT0="
 ];
 
-const u = u.map(x => atob(atob(x)));
-console.log(u);
+const a = u.map(x => atob(atob(x)));
+console.log(a);
